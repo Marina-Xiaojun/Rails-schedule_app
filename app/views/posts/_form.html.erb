@@ -1,0 +1,63 @@
+<%= form_with model: @post do |form| %>
+
+  <div class="form-box">
+
+  <div class="title-box">
+  <div>
+    <%= form.label :title, "タイトル" %><span>*</span>
+    </div>
+    <div>
+    <%= form.text_field :title, placeholder: "タイトル" %>
+    <% @post.errors.full_messages_for(:title).each do |message| %>
+     <div><%= message %></div>
+    <% end %>
+  </div>
+ </div>
+
+ <div class="date-box">
+  <div>
+  <div>
+    <%= form.label :start_date, "開始日" %><span>*</span>
+    </div>
+    <div>
+    <%= form.date_field :start_date %>
+    <% @post.errors.full_messages_for(:start_date).each do |message| %>
+     <div><%= message %></div>
+    <% end %>
+  </div>
+ </div>
+
+ <div>
+  <div>
+    <%= form.label :end_date, "終了日" %><span>*</span>
+    </div>
+  
+
+    <div>
+    <%= form.date_field :end_date %>
+
+     <% @post.errors.full_messages_for(:end_date).each do |message| %>
+    <div><%= message %></div>
+  <% end %>
+  </div>
+ </div>
+ </div>
+
+  <div class="all-day">
+    <%= form.label :all_day, "終日の場合はチェックを入れます" %>
+    <%= form.check_box :all_day %>
+  </div>
+
+    <div class="memo-box">
+    <%= form.label :body, "スケジュールメモ" %>
+    <%= form.text_area :body, placeholder: "メモを入力する" %>
+  </div>
+
+    <div class="form-buttons">
+    <%= link_to "キャンセル", posts_path, class: "button" %>
+    <%= form.submit "保存", class: "save-button" %>
+  </div>
+</div>
+
+<% end %>
+

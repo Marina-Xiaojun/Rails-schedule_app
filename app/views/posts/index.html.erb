@@ -1,0 +1,43 @@
+<div class="schedule-header">
+<h1>予定一覧</h1>
+
+<%= link_to "新規追加", new_post_path, class: "new-button" %>
+</div>
+
+<table class="schedule-table">
+  <tr>
+    <th>ID</th>
+    <th>タイトル</th>
+    <th>開始日</th>
+    <th>終了日</th>
+    <th>終日</th>
+    <th>更新日時</th>
+    <th></th>
+  </tr>
+
+<% @posts.each do |post| %>
+ <tr>
+      <td><%= post.id %></td>
+      <td><%= post.title %></td>
+      <td><%= post.start_date.strftime("%Y/%m/%d") %></td>
+      <td><%= post.end_date.strftime("%Y/%m/%d") %></td>
+      <td><%= post.all_day ? "〇" : "" %></td>
+      <td><%= post.updated_at.strftime("%Y/%m/%d %H:%M") %></td>
+
+    <td>
+      <%= link_to "詳細", post_path(post) %>
+      <%= link_to "編集", edit_post_path(post) %>
+      <%= link_to "削除", post_path(post), data: { turbo_method: :delete, turbo_confirm: "予定を削除しますか？" } %>
+    </td>
+
+    </tr>
+  <% end %>
+</table>
+
+<div class="schedule-summary">
+  <span>予定合計 <%= @posts.count %>件</span>
+  <span>本日の日付 <%= Date.current.strftime("%Y/%m/%d") %></span>
+</div>
+
+
+  

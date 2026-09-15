@@ -1,3 +1,237 @@
+header {
+  background-color: navy;
+  color: white;
+  padding: 10px;
+ margin-bottom: 10px;
+ text-align: center;
+}
+
+body {
+  background-color: #f2f2f24d;
+}
+
+header h1{
+  margin:0;
+  font-size: 10px;
+}
+
+span {
+  color: red;
+  display: inline;
+}
+
+.new {
+  width: 500px;
+  margin: 0 auto;
+ }
+
+ .new h1 {
+  font-size: 20px;
+ }
+
+.form-box {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+span {
+  color: red;
+  
+}
+
+.title-box {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.title-box input {
+  height: 35px;
+}
+
+.date-box {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.date-box > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.date-box input {
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.all-day {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.memo-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 30px;
+}
+
+.memo-box textarea {
+  width: 100%;
+  height: 120px;
+  box-sizing: border-box;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-block;
+  padding: 8px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-decoration: none;
+  background-color: white;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.save-button {
+  cursor: pointer;
+}
+
+.form-buttons input[type="submit"] {
+background-color: blue;
+color: white;
+}
+
+/*.alert {
+ background-color: #f8d7da;
+  color: #842029;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}*/
+
+.schedule-table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background-color: rgb(227, 232, 235);
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #eee;
+  padding: 12px;
+  text-align: center;
+  
+}
+
+.schedule-header {
+  width: 90%;
+  margin: 30px auto 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.schedule-header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.new-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(35, 110, 180);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.new-button:hover {
+  opacity: 0.8;
+}
+
+.show-links {
+  display: flex;
+  gap: 20px;
+}
+
+.edit-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(35, 110, 180);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.show-links {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.show-card {
+  width: 70%;
+  margin: 30px auto;
+  background-color: white;
+  border: 1px solid #ddd;
+}
+
+.show-row {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.schedule-summary {
+  width: 90%;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.schedule-summary span {
+  color: black;
+}
+
+.flash-notice {
+  width: 30%;
+  margin: 15px auto;
+  padding: 12px 20px;
+  border: 1px solid #285fc718;
+  border-radius: 4px;
+  background-color: navy;
+  color: white;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

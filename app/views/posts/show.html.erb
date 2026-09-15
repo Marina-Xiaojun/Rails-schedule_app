@@ -1,0 +1,34 @@
+<div class="show-links">
+<%= link_to "← 一覧へ戻る", posts_path %>
+
+<%= link_to "✍編集する", edit_post_path(@post), class: "edit-button" %>
+</div>
+
+<div class="show-card">
+
+<p class="show-row">
+  <strong>タイトル：</strong>
+  <%= @post.title %>
+</p>
+
+<p class="show-row">
+  <strong>開始日：</strong>
+  <%= @post.start_date.strftime("%Y/%m/%d") %>
+</p>
+
+<p class="show-row">
+  <strong>終了日：</strong>
+  <%= @post.end_date.strftime("%Y/%m/%d") %>
+</p>
+
+<p class="show-row">
+  <strong>終日：</strong>
+  <%= @post.all_day ? "〇" : "" %>
+</p>
+
+<p class="show-row">
+  <strong>スケジュールメモ：</strong>
+  <%= @post.body %>
+</p>
+
+</div>
