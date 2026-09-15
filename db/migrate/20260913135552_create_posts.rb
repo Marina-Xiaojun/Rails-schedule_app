@@ -4,8 +4,8 @@ class CreatePosts < ActiveRecord::Migration[7.2]
       t.string :title, null: false
       t.text :body
       t.date :start_date, null: false
-      t.date :end_date, null:false
-      t.boolean :all_day, null:false
+      t.date :end_date, null: false
+      t.boolean :all_day, null: false
 
       t.timestamps
     end

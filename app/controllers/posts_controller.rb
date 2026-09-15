@@ -19,7 +19,7 @@ class PostsController < ApplicationController
   else
    flash.now[:alert] = "スケジュールの登録に失敗しました"
    render :new, status: :unprocessable_entity
- end  
+  end
 end
 
  def edit
@@ -49,5 +49,4 @@ private
  def post_params
   params.require(:post).permit(:title, :body, :start_date, :end_date, :all_day)
  end
-
 end
